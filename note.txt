@@ -1,0 +1,19 @@
+npm i express jsonwebtoken mongoose dotenv argon2 cors
+
+express (server)
+jsonwebtoken (login logout xac thuc nguoi dung)
+mongoose (server -> database)
+dotenv (biến môi trường)
+argon2 (hash password)
+cors (fontend kết nối với backend)
+
+add extensions REST Client (request trong VScode thay thế postman)
+
+lỗi 
+MongoServerError: E11000 duplicate key error collection: first-project.users index: Username_1 dup key: { Username: null }
+delete collection trong database chạy lại là đc
+
+
+fontend
+
+npm i react-bootstrap bootstrap axios react-router-dom

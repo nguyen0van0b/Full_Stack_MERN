@@ -1,0 +1,50 @@
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "Phuoc01",
+    "password": "Phuoc01"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "henry03",
+    "password": "henry03"
+}
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: phuoc eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIxOWE2ZmMyMTBhNGI5NGRjN2E2YzMiLCJpYXQiOjE2NDYzNjkzOTF9.srGprKS-yGAWA2qiOBIBtEuLh0NKcC3LNarVAylfD7o
+
+{
+    "title":"Tao Phuoc Test",
+    "description": "Tao Phuoc",
+    "url": "https://phuoc.org",
+    "status":"LERNING"
+}
+###
+# list posts
+GET http://localhost:5000/api/posts
+Authorization: phuoc eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIxOWE2ZmMyMTBhNGI5NGRjN2E2YzMiLCJpYXQiOjE2NDYzNjkzOTF9.srGprKS-yGAWA2qiOBIBtEuLh0NKcC3LNarVAylfD7o
+###
+# edit post
+PUT http://localhost:5000/api/posts/62219a8ec210a4b94dc7a6c5
+Content-Type: application/json
+Authorization: phuoc eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIxOWE2ZmMyMTBhNGI5NGRjN2E2YzMiLCJpYXQiOjE2NDYzNjkzOTF9.srGprKS-yGAWA2qiOBIBtEuLh0NKcC3LNarVAylfD7o
+
+{
+    "title":"Tao Phuoc Test update",
+    "description": "Tao Phuoc nek",
+    "url": "phuocnek.org",
+    "status":"LERNING"
+}
+
+###
+# delete post
+delete http://localhost:5000/api/posts/62219a8ec210a4b94dc7a6c5
+Authorization: phuoc eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIxOWE2ZmMyMTBhNGI5NGRjN2E2YzMiLCJpYXQiOjE2NDYzNjkzOTF9.srGprKS-yGAWA2qiOBIBtEuLh0NKcC3LNarVAylfD7o
